@@ -19,4 +19,12 @@
     <url-pattern>/now</url-pattern>
     <url-pattern>/days01/now</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>0g</servlet-name>
+    <servlet-class>days01.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>0g</servlet-name>
+    <url-pattern>/0g</url-pattern>
+  </servlet-mapping>
 </web-app>
