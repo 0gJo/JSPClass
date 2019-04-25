@@ -1,0 +1,20 @@
+days02 정리
+
+*응답시 한글깨짐현상 
+
+request.setCharacterEncoding("UTF-8");/////////////////중요	
+-> 클라이언트 요청 코딩을 UTF-8로 decoding(해독)하겠다..
+
+response.setContentType("text/html;charset=UTF-8");
+
+* 서블릿 URL 매핑규칙
+   4. 그외 패턴   일치
+ 3. 오직 '/' 만 어플리케이션의 기본 서블릿 매핑
+    2.  확장자    :    '*.'   시작
+   1.  경로 패턴 :    '/' 로 시작  ~~~~   '/*'
+   
+* 서블릿로딩과 초기화 / 초기화파라미터
+
+
+
+

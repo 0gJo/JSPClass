@@ -19,4 +19,53 @@
     <url-pattern>/now</url-pattern>
     <url-pattern>/days01/now</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>test</servlet-name>
+    <servlet-class>days02.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/days02/call</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>lifeCycle</servlet-name>
+    <servlet-class>days02.LifeCycle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>lifeCycle</servlet-name>
+    <url-pattern>/days02/info.htm</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DBCPInit</servlet-name>
+    <servlet-class>days02.DBCPInit</servlet-class>
+    <init-param>
+      <param-name>className</param-name>
+      <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>url</param-name>
+      <param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+    </init-param>
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>scott</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>tiger</param-value>
+    </init-param>
+  </servlet>
+  
+  
+  <servlet>
+  <servlet-name>LoginRedirect</servlet-name>
+  <servlet-class>days02.LoginRedirect</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>LoginRedirect</servlet-name>
+  <url-pattern>/days02/re</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web class - 0gJo 2019. 4. 25.-오전 9:05:11</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<script>
+   $(document).ready(function (){
+	 
+   });
+</script>
+</head>
+<body>
+<form action="test01_ok.jsp">
+<a href="">JSP</a><br>
+이름 :<input id="name" name="name" required="required" type="text"><br>
+나이 :<input id="age" name="age" required="required" type="number"><br>
+이메일 : <input id="email" name="email" type="email"><br>
+
+<button type="submit">제출</button>
+</form>
+<form action="">
+<a href="">Servlet</a><br>
+정수입력 : <input id="num" name="num" type="text"><br>
+<a id="link" href="call">서블릿호출</a>
+
+</form>
+
+<script type="text/javascript">
+$("#link").click(function() {
+	var value = $(this).attr("href");
+	value += "?num="+$("#num").val();
+	alert(value);
+	$(this).attr("href", value);
+})
+
+
+
+
+</script>
+
+</body>
+</html>
