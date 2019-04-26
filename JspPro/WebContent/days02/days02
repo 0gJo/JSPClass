@@ -126,6 +126,9 @@ root부터 경로를 찾아간다..
 action="method"
 @WebServlet(urlPatterns="/days02/method" ...
 
+
+background-image: url("/webPro/css/days02/images/img_tree.png");ㄴ
+
 [	]
 ex09
 
