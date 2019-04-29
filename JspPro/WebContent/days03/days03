@@ -98,9 +98,8 @@ wep 파일 압축 -> war
 
 [		]
 test02_02.jsp
-***ex04-Ex04_Emp-ex04_ok + ***JSTL
- --> 선택한 부서에 해당하는 사원들 정보 모두 읽어와서 card 뿌리기
-
+***ex04-Ex04_Emp-ex04_ok --> 선택한 부서에 해당하는 사원들 정보 모두 읽어와서 card 뿌리기
++ ***JSTL
 ㅇ + (과제) ex04.jsp 의 select 태그 밑에 해당 정보 뿌리기 (페이지 이동 않고)
 
 line63 String path ="ex04_ok.jsp"; ----> String path ="ex04.jsp";

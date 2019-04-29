@@ -20,11 +20,92 @@
     <url-pattern>/days01/now</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>0g</servlet-name>
-    <servlet-class>days01.MyServlet</servlet-class>
+    <servlet-name>test</servlet-name>
+    <servlet-class>days02.TestServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>0g</servlet-name>
-    <url-pattern>/0g</url-pattern>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/days02/call</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>lifeCycle</servlet-name>
+    <servlet-class>days02.LifeCycle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>lifeCycle</servlet-name>
+    <url-pattern>/days02/info.htm</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DBCPInit</servlet-name>
+    <servlet-class>days02.DBCPInit</servlet-class>
+    <init-param>
+      <param-name>className</param-name>
+      <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>url</param-name>
+      <param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+    </init-param>
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>scott</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>tiger</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginRedirect</servlet-name>
+    <servlet-class>days02.LoginRedirect</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginRedirect</servlet-name>
+    <url-pattern>/days02/re</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>empServlet</servlet-name>
+  <servlet-class>days03.Ex04_Emp</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>empServlet</servlet-name>
+  <url-pattern>/days03/ex04_emp</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>elServlet</servlet-name>
+  <servlet-class>days03.Ex05_EL</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>elServlet</servlet-name>
+  <url-pattern>/days03/ex05_el</url-pattern>
+  </servlet-mapping>
+  
+  
+     <servlet>
+  <servlet-name>testEmpServlet</servlet-name>
+  <servlet-class>days04.Test01_EmpServlet</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>testEmpServlet</servlet-name>
+  <url-pattern>/employees.do</url-pattern>
+  </servlet-mapping>
+  
+  
+      <servlet>
+  <servlet-name>ChangeJobServlet</servlet-name>
+  <servlet-class>days04.ChangeJobServlet</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>ChangeJobServlet</servlet-name>
+  <url-pattern>/changejob.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
 </web-app>

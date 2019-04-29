@@ -1,4 +1,5 @@
 test
+
 link 태그 클릭시 number input 값 넘기기
 
 Servelt 결과 문서에서 한글깨짐
@@ -124,6 +125,9 @@ root부터 경로를 찾아간다..
 
 action="method"
 @WebServlet(urlPatterns="/days02/method" ...
+
+
+background-image: url("/webPro/css/days02/images/img_tree.png");ㄴ
 
 [	]
 ex09
