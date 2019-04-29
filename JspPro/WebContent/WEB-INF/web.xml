@@ -85,5 +85,27 @@
   </servlet-mapping>
   
   
+     <servlet>
+  <servlet-name>testEmpServlet</servlet-name>
+  <servlet-class>days04.Test01_EmpServlet</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>testEmpServlet</servlet-name>
+  <url-pattern>/employees.do</url-pattern>
+  </servlet-mapping>
+  
+  
+      <servlet>
+  <servlet-name>ChangeJobServlet</servlet-name>
+  <servlet-class>days04.ChangeJobServlet</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>ChangeJobServlet</servlet-name>
+  <url-pattern>/changejob.do</url-pattern>
+  </servlet-mapping>
+  
+  
   
 </web-app>
