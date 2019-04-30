@@ -108,4 +108,57 @@
   
   
   
+  <servlet>
+  <servlet-name>registServlet</servlet-name>
+  <servlet-class>days05.Regist</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>registServlet</servlet-name>
+  <url-pattern>/board/regist</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+  <servlet-name>listServlet</servlet-name>
+  <servlet-class>days05.List</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>listServlet</servlet-name>
+  <url-pattern>/board/list</url-pattern>
+  </servlet-mapping>
+  
+  
+      <servlet>
+  <servlet-name>contentServlet</servlet-name>
+  <servlet-class>days05.Content</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>contentServlet</servlet-name>
+  <url-pattern>/board/content</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>deleteServlet</servlet-name>
+  <servlet-class>days05.Delete</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>deleteServlet</servlet-name>
+  <url-pattern>/board/delete</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+  <servlet-name>editServlet</servlet-name>
+  <servlet-class>days05.Edit</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>editServlet</servlet-name>
+  <url-pattern>/board/edit</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>
