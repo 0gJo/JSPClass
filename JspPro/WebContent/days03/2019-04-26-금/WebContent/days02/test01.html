@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 25.-오전 7:49:13 K≡n¡k</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+</style>
+<script>
+   $(document).ready(function (){
+	   $( "#tabs" ).tabs();
+   });
+</script>
+</head>
+<body>
+
+<fieldset id="tabs-1">
+<legend ><a href="#tabs-1">JSP</a></legend>
+
+<form action="test01_ok.jsp" method="get">
+이름 : <input type="text" id="name" name="name" required="required" /><br>
+나이 : <input type="number" id="age" name="age" min="1" max="150" required="required" /><br> 
+이메일 :  <input type="email" id="email" name="email" /><br>
+<input type="submit" />
+</form>
+
+</fieldset>
+
+<!-- 
+1. 이름/나이 필수 입력사항
+2. 이메일 : 유효한 이메일 체크
+3. test01_ok.jsp 페이지를  get 방식으로요청해서 입력값 출력
+    ㄱ. 입력값 출력할 때 표현식사용해서 출력하고
+         다시 EL 사용해서 출력하고...
+ -->
+ <fieldset id="tabs-2">
+ <legend><a href="#tabs-2">Servlet</a></legend>
+ 
+ 
+ 정수 입력 : <input type="text" name="num" id="num" value="10" />
+ <br>
+<a href="/jspPro/days02/call" id="link">서블릿 호출</a>
+
+
+</fieldset>
+ 
+ 
+ 
+ 
+ <!-- 
+ -->
+ <script>
+   $("#link").click(function (event){	   
+	   $(this).attr("href", function( i, val ) {
+		   return val + "?num="+$("#num").val(); }  );	   
+	   //alert(  $(this).attr("href") );	   
+	   //event.preventDefault();
+   });
+ </script>
+</body>
+</html>
+
+
+
+
