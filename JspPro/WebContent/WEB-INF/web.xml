@@ -9,7 +9,20 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
+  
+  <!-- p.173 코드조각자동 포함 기능 -->
+  <jsp-config>
+  <jsp-property-group>
+<!--   <url-pattern>/*</url-pattern>-->  
+  <url-pattern>/days08/*</url-pattern>
+  <include-prelude>/includee.jspf</include-prelude>
+<!--   <include-coda></include-coda> -->
+  </jsp-property-group>
+  </jsp-config>
+  
+  
+  
+<!--   <servlet>
     <servlet-name>now</servlet-name>
     <servlet-class>days01.NowServlet</servlet-class>
   </servlet>
@@ -26,15 +39,15 @@
   <servlet-mapping>
     <servlet-name>test</servlet-name>
     <url-pattern>/days02/call</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+<!--   <servlet>
     <servlet-name>lifeCycle</servlet-name>
     <servlet-class>days02.LifeCycle</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>lifeCycle</servlet-name>
     <url-pattern>/days02/info.htm</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <servlet-name>DBCPInit</servlet-name>
     <servlet-class>days02.DBCPInit</servlet-class>

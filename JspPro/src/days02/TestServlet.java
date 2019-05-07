@@ -17,7 +17,9 @@ public class TestServlet extends HttpServlet {
 	PrintWriter out =	resp.getWriter() ;
 		
 	int num = Integer.parseInt(req.getParameter("num"));
-		
+	
+	
+
 	
 	int sum = 0;
 	

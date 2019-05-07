@@ -1,0 +1,10 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	// 웹 애플리케이션 (웹사이트) 전체에 사용되는 공통적인 기능 선언, 수행
+	// 레이아웃-> 액션태그 / include : 공통변수, 값 선언
+	request.setCharacterEncoding("UTF-8");
+	String contextPath = request.getContextPath();
+	String downloadPath = "download";
+
+%>
+<%-- <h3>title : <%=title %></h3> --%>
