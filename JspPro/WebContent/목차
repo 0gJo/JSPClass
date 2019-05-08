@@ -48,7 +48,10 @@ CHAPTER 08 자바빈과 액션 태그
 CHAPTER 09 클라이언트와의 대화 1 : 쿠키 
 
 CHAPTER 10 클라이언트와의 대화 2 : 세션 
-
+01 세션 사용하기 : session 기본 객체 
+02 세션을 사용한 로그인 상태 유지 
+03 연관된 정보 저장을 위한 클래스 작성 
+04 서블릿 컨텍스트와 세션 
 CHAPTER 11 표현 언어(Expression Language) 
 
 CHAPTER 12 표준 태그 라이브러리(JSTL) 
