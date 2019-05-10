@@ -1,19 +1,20 @@
-package days10.mvc.command;
+package days10.mvc.board;
 
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class NullHandler implements CommandHandler, board21.member.command.CommandHandler {
+import days10.mvc.command.CommandHandler;
+
+public class ContentHandler implements CommandHandler {
 
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		response.sendError(HttpServletResponse.SC_NOT_FOUND);
-		return null;
+		
+		
+		return "board/content";
 	}
 
-	
-	
 }

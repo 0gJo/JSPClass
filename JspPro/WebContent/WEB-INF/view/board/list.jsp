@@ -41,7 +41,7 @@ color: black;
   <tr align="center">
    <td>${dto.seq}</td>
     <td>
-       <a href="/JspPro/board/content?seq=${dto.seq}">${dto.subject}</a>
+       <a href="/JspPro/board/content.do?seq=${dto.seq}">${dto.subject}</a>
     </td>
     <td> 
        <a href="mailto:${dto.email }">${dto.name}</a>

@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import days10.mvc.command.CommandHandler;
+import board21.member.command.CommandHandler;
 import days10.mvc.command.NullHandler;
+
 
 public class ControllerUsingURI extends HttpServlet {
 	
@@ -91,8 +92,7 @@ public class ControllerUsingURI extends HttpServlet {
 		
 		if (command.indexOf(request.getContextPath())==0) {
 			int beginIndex = request.getContextPath().length();
-			command = command.substring(beginIndex);
-			
+			command = command.substring(beginIndex);	
 		}
 		
 		CommandHandler handler = commandHandlerMap.get(command);
