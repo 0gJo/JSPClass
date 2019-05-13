@@ -41,6 +41,9 @@ public class JoinRequest {
 	
 	public void Validate(Map<String,Boolean> errors) {
 		//JoinRequest에 문제가 없는지 검사
+		// 입력안한것 있는지 + 비밀번호가 confirm비밀번호와 match인지 
+		
+		
 		
 		checkEmpty(errors, id, "id");
 		checkEmpty(errors, password, "password");

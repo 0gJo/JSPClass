@@ -1,12 +1,12 @@
-package board21.auth.service;
+package board21.article.model;
 
-public class User {
-	// 인증에 성공한 사용자 객체
+public class Writer {
+	
 	private String id;
 	private String name;
 	
 	
-	public User(String id, String name) {
+	public Writer(String id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -27,7 +27,5 @@ public class User {
 	}
 	
 	
-	
-	
-	
+
 }

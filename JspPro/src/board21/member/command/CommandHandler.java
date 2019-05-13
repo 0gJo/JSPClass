@@ -7,6 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public interface CommandHandler {
 
-	public String process( HttpServletRequest request, HttpServletResponse response) throws IOException; 
+	public String process( HttpServletRequest request, HttpServletResponse response) throws IOException, Exception; 
 	
 }

@@ -61,8 +61,6 @@ public class JoinHandler implements CommandHandler {
 		
 		// 잘 넘어 왔으면 == 회원가입 성공한 경우 
 		
-		
-		
 		try {
 			joinService.join(joinReq);
 			return "/board21/joinSuccess";

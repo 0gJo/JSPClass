@@ -24,7 +24,7 @@ ex02
 
 4. META-INF 폴더 에 context.xml 파일 추가(Server의 context.xml 을 복사 붙여넣기)
 
-5. web.xml  설정추가
+5. web.xml  설정추가    <resource-ref>
 
 6. com.util에 ConnectionProvider 클래스 파일 추가 및  getConnection 메서드 추가
 
