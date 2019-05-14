@@ -27,6 +27,17 @@ public class Article {
 	}
 
 
+	public Article(int article_no, Writer writer, String title, String content, Date regdate, Date moddate, int read_cnt) {
+		this.article_no = article_no;
+		this.writer = writer;
+		this.title = title;
+		this.content = content;
+		this.regdate = regdate;
+		this.moddate = moddate;
+		this.read_cnt = read_cnt;
+	}
+
+
 	public int getArticle_no() {
 		return article_no;
 	}

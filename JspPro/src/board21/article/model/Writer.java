@@ -7,7 +7,7 @@ public class Writer {
 	
 	
 	public Writer(String id, String name) {
-		super();
+
 		this.id = id;
 		this.name = name;
 	}

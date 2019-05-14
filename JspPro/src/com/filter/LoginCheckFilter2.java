@@ -31,6 +31,8 @@ public class LoginCheckFilter2 implements Filter {
 			
 			HttpServletResponse res = (HttpServletResponse)response;
 			
+			session.setAttribute("referer", req.getRequestURI());
+			
 			res.sendRedirect(req.getContextPath()+"/login.do");
 		}else {
 			chain.doFilter(request, response);

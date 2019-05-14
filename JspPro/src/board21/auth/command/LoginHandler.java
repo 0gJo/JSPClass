@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import board21.auth.service.LoginFailException;
 import board21.auth.service.LoginService;
@@ -78,8 +79,18 @@ public class LoginHandler implements CommandHandler {
 	
 		//RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/view/board21/index.jsp");
 		//dispatcher.forward(request, response);
+		HttpSession session = request.getSession(false);
 		
-		response.sendRedirect(request.getContextPath()+"/index.do");
+		if (session.getAttribute("referer")!=null) {
+			
+			response.sendRedirect((String)session.getAttribute("referer"));
+			
+		}else {
+			response.sendRedirect(request.getContextPath()+"/index.do");
+		}
+		
+		
+		
 		
 		return null;
 	

@@ -46,6 +46,8 @@ public class WriteArticleHandler implements CommandHandler {
 	
 	User user = 	(User)request.getSession().getAttribute("authUser");
 	
+	System.out.println(request.getSession().getAttribute("authUser"));
+	
 	WriteRequest writeReq = createWriteRequest(user, request);//java.lang.NullPointerException
 	
 	writeReq.validate(errors);
