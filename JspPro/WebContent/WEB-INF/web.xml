@@ -12,10 +12,6 @@
   
   
  <jsp-config>
- <jsp-property-group>
- <url-pattern></url-pattern>
- <el-ignored></el-ignored>
- </jsp-property-group>
  
  
  <taglib>
