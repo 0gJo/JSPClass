@@ -10,6 +10,9 @@ public class Member {
 	private Date regDate;
 	
 	
+	public Member() {}
+	
+	
 	public Member(String memberid, String name, String password, Date regDate) {
 		this.memberid = memberid;
 		this.name = name;
@@ -43,6 +46,26 @@ public class Member {
 	}
 	
 	public void changePassword(String newPwd) { this.password = newPwd;}
+
+
+	public void setMemberid(String memberid) {
+		this.memberid = memberid;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
 	
 	
 

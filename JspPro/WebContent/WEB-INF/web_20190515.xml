@@ -27,17 +27,26 @@
   <listener-class>com.util.DBCPInitListener</listener-class>
   </listener>
    -->
-
+  <filter>
+  <filter-name>LoginCheckFilter2</filter-name>
+  <filter-class>com.filter.LoginCheckFilter2</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>LoginCheckFilter2</filter-name>
+  <url-pattern>/changePwd.do</url-pattern>
+  <url-pattern>/article/write.do</url-pattern>
+  </filter-mapping>
   
   
   
   <!-- Controller 서블릿 등록 -->
   <servlet>
   <servlet-name>ControllerUsingURI</servlet-name>
-  <servlet-class>days15.message.controller.ControllerUsingURI</servlet-class>
+  <servlet-class>days10.mvc.controller.ControllerUsingURI</servlet-class>
   <init-param>
   <param-name>configFile</param-name>
-  <param-value>/WEB-INF/view/days15/commandHandlerURI.properties</param-value>
+  <param-value>/WEB-INF/view/board21/commandHandlerURI.properties</param-value>
   </init-param>
   </servlet>
   
@@ -46,7 +55,7 @@
   <url-pattern>*.do</url-pattern>
   </servlet-mapping>
   
- 
+  
   <!-- encoding Filter -->
   <filter>
   <filter-name>encodingFilter</filter-name>
@@ -63,7 +72,16 @@
   </filter-mapping>
   
   
+  <context-param>
+  <param-name>poolConfig</param-name>
+  <param-value>
+  			 className=oracle.jdbc.driver.OracleDriver
+			 url=jdbc:oracle:thin:@localhost:1521:xe
+			 user=scott
+			 password=tiger
   
+  </param-value>
+  </context-param>
   
   
    <resource-ref>
