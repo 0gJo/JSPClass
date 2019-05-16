@@ -23,10 +23,13 @@ public class MessageDao {
 	
 	public int insert(Connection conn, Message message) throws SQLException {
 		PreparedStatement pstmt = null;
+		System.out.println(message.getGuestName());
 		try {
 			pstmt = conn.prepareStatement(
-					"insert into guestbook_message " + 
-					"(guest_name, password, message) values (?, ?, ?)");
+					"insert into guestbook_message_15 " + 
+					"( message_id, guest_name, password, message) values (SEQ_GUESTBOOK_MESSAGE_15.nextval,?, ?, ?)");
+			
+			
 			pstmt.setString(1, message.getGuestName());
 			pstmt.setString(2, message.getPassword());
 			pstmt.setString(3, message.getMessage());
@@ -41,7 +44,7 @@ public class MessageDao {
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"select * from guestbook_message where message_id = ?");
+					"select * from guestbook_message_15 where message_id = ?");
 			pstmt.setInt(1, messageId);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -69,7 +72,7 @@ public class MessageDao {
 		ResultSet rs = null;
 		try {
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("select count(*) from guestbook_message");
+			rs = stmt.executeQuery("select count(*) from guestbook_message_15");
 			rs.next();
 			return rs.getInt(1);
 		} finally {
@@ -84,10 +87,11 @@ public class MessageDao {
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"select * from guestbook_message " + 
-					"order by message_id desc limit ?, ?");
-			pstmt.setInt(1, firstRow - 1);
-			pstmt.setInt(2, endRow - firstRow + 1);
+					"select * from guestbook_message_15 " + 
+					"where MESSAGE_ID between ? and ?  " + 
+					"order by MESSAGE_ID desc;");
+			pstmt.setInt(1, firstRow);
+			pstmt.setInt(2, endRow);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
 				List<Message> messageList = new ArrayList<Message>();
@@ -108,7 +112,7 @@ public class MessageDao {
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"delete from guestbook_message where message_id = ?");
+					"delete from guestbook_message_15 where message_id = ?");
 			pstmt.setInt(1, messageId);
 			return pstmt.executeUpdate();
 		} finally {
