@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web class - 0gJo 2019. 5. 21.-오전 9:33:23</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<script>
+/* 	var httpRequest;
+	function getXMLHttpRequest() {
+		if (window.ActiveXObject) {
+
+			try {
+				return new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					return new ActiveXObject("Microsoft.XMLHTTP")
+				} catch (e) {
+					return null;
+				}
+			}
+		} else if (window.XMLHttpRequest) {
+
+			return new XMLHttpRequest();
+		} else {
+			return null;
+		}
+	}
+
+	// 비동기적으로 자원 sample.txt 요청 
+	function load(url) {
+
+		httpRequest = getXMLHttpRequest();
+
+		httpRequest.onreadystatechange = callback; // state : 전 / 진행중  / 후 등 state가 변할때마다 callback함수 호출하겠다.
+		httpRequest.open("GET", url, true);
+
+		httpRequest.send(null);
+
+		// 콜백함수 (callback function)
+
+		function callback() {
+			//404, 500 : 오류
+			// 200 -> 오류없음 의미
+
+			if (httpRequest.readyState == 4) { //다녀왔는지 
+				if (httpRequest.status == 200) {    // 데이터 잘 가져왔는지
+					//response.Text 문자열
+					//responseXML XML
+					//responseBody 이진문자열
+
+					alert(httpRequest.responseText);
+				}else {
+					alert("ajax 요청 실패" + httpRequest.status);
+				}
+		}
+
+	} */
+</script>
+<script>
+ 
+	   var httpRequest; //  변수 선언
+	   function getXMLHttpRequest(){   // 함수
+	       if( window.ActiveXObject ){   // IE
+	     	  try{
+	     	     return new ActiveXObject("Msxml2.XMLHTTP");   // 
+	     	  }catch(e){
+	     		  try{
+	     		    return new ActiveXObject("Microsoft.XMLHTTP");
+	     		  }catch(e){
+	     			  return null;
+	     		  }
+	     	  }
+	       }else if( window.XMLHttpRequest ){
+	     	  return new XMLHttpRequest();
+	       }else{
+	     	  return null;
+	       }
+	   }  
+	   
+	// 비동기적으로 서버의 자원( sample.txt ) 을 요청.
+	   function load( url ){
+		   // 1. XMLHttpRequest 요청 객체
+		   httpRequest = getXMLHttpRequest();
+		   // 2. 설정 open()
+		   httpRequest.onreadystatechange = callback;
+		   httpRequest.open("GET", url , true);
+		   // 3. 요청 send()
+		   httpRequest.send(null);
+	   }  
+	   
+	   // 콜백함수(  callback function )
+	   function callback(){
+		   // 404, 500    200
+		   if( httpRequest.readyState == 4  ){  // 데이터 얻어왔다..
+			   if( httpRequest.status == 200 ){
+				   //resonseText 문자열
+				   //responseXML XML
+				   //responseBody   이진코드문자열
+				   alert( httpRequest.responseText );
+			   }else{
+				   alert( "> Ajax 요청 실패 " +  httpRequest.status );
+			   }
+		   }
+	   }
+
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#btnAjax").click(function() {
+		$("#demo").load("sample01.txt",function(response, status, xhr ){
+			if (status == "error") {
+				alert("요청실패");
+			}else if (status == "success") {
+				alert("요청성공")
+				
+			}	
+		
+		} )
+		})
+	})
+	
+
+
+</script>
+</head>
+<body>
+
+	<input type="button" value="javascript ajax" onclick="load('sample01.txt')">
+	<input type="button" value="jquery ajax" id="btnAjax">
+	<br>
+	<hr>
+	<div id="demo"></div>
+</body>
+</html>
