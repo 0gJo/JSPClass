@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web class - 0gJo 2019. 5. 28.-오전 9:24:44</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+ <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+<script>
+   $(document).ready(function (){
+	 
+   });
+</script>
+</head>
+<body>
+    <div id="map"></div>
+      <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var handok = {lat: 37.499294, lng: 127.033188};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 15, center: handok});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({
+	  position: handok
+	  //,  map: map
+	  //, animation : google.maps.Animation.BOUNCE
+	  // ,	icon : "https://www.w3schools.com/graphics/pinkball.png"
+	  });
+  marker.setMap(map);
+  /* info를 보여주는 말풍선 창 */
+  var info = "<a href='http://www.sist.co.kr'>(주)쌍용교욱센터</a>"
+  var infowindow = new google.maps.InfoWindow({
+	  content: info
+  });
+  
+  //infowindow.open(map,marker);
+  
+  /* (클릭)이벤트 등록 및 처리  */
+  google.maps.event.addListener(marker,"click",function(){
+	  //map.setZoom(4);
+	  //map.setCenter(marker.getPosition());
+	  
+	  infowindow.open(map,marker);
+	  window.setTimeout(function() {
+	  infowindow.close(map,marker);	
+	  }, 3000)
+	  
+  });
+  
+}
+</script>      
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD22gGuJambID4g4M2bHWgxOCmWCArzTzM&callback=initMap">
+</script>
+    
+</body>
+</html>
