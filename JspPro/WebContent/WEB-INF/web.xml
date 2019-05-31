@@ -19,11 +19,20 @@
   </listener>
    -->
 
-  
-  
+
+<servlet>
+
+<servlet-name>FileTest</servlet-name>
+<servlet-class>days23.FileTest</servlet-class>
+</servlet>
+  <servlet-mapping>
+  <servlet-name>FileTest</servlet-name>
+  <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
   
   <!-- Controller 서블릿 등록 -->
-  <servlet>
+ <!--  
+ <servlet>
   <servlet-name>ControllerUsingURI</servlet-name>
   <servlet-class>days16.replyboard.controller.ControllerUsingURI</servlet-class>
   <init-param>
@@ -36,7 +45,7 @@
   <servlet-name>ControllerUsingURI</servlet-name>
   <url-pattern>*.do</url-pattern>
   </servlet-mapping>
-  
+   -->
  
   <!-- encoding Filter -->
   <filter>

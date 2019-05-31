@@ -22,9 +22,8 @@
    content 출력 부분...<br>
    content 출력 부분...<br>
    content 출력 부분...<br>
-   content 출력 부분...<br>
    
-  <jsp:include page="ex10_sub.jsp" flush="false"></jsp:include> 
+  <jsp:include page="/WEB-INF/view/ex10_sub.jsp" flush="false"></jsp:include> 
    
 
 <%-- 
